@@ -3,9 +3,17 @@ name = "NewWorldDB"
 databaseType = "SqlServer"
 
 [environments.test]
-url = "jdbc:sqlserver://localhost;databaseName=newworlddb_test;encrypt=false;integratedSecurity=true;trustServerCertificate=true"
-schemas = [ ]
+url = "jdbc:sqlserver://127.0.0.1:1988;authentication=sqlPassword;databaseName=newworlddb_test;encrypt=true;trustServerCertificate=true"
 displayName = "Test"
+
+[environments.Build]
+url = "jdbc:sqlserver://127.0.0.1:1988;authentication=sqlPassword;databaseName=NewWorldDB_Build;encrypt=true;trustServerCertificate=true"
+
+[environments.Production]
+url = "jdbc:sqlserver://127.0.0.1:1988;authentication=sqlPassword;databaseName=NewWorldDB_Prod;encrypt=true;trustServerCertificate=true"
+
+[environments.Check]
+url = "jdbc:sqlserver://127.0.0.1:1988;authentication=sqlPassword;databaseName=NewWorldDB_Check;encrypt=true;trustServerCertificate=true"
 
 [flyway]
 locations = [ "filesystem:migrations" ]
@@ -14,9 +22,8 @@ outOfOrder = true
 validateMigrationNaming = true
 defaultSchema = "dbo"
 
-  [flyway.plugins]
-    [flyway.plugins.clean]
-    mode = "all"
+[flyway.plugins.clean]
+mode = "all"
 
 [flywayDesktop]
 developmentEnvironment = "development"
