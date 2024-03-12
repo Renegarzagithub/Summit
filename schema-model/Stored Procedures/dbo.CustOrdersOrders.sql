@@ -5,7 +5,8 @@ GO
 
 CREATE PROCEDURE [dbo].[CustOrdersOrders] @CustomerID nchar(5)
 AS
-SELECT OrderID, 
+SELECT CustomerID, --hot_fix--
+	OrderID, 
 	OrderDate,
 	RequiredDate,
 	ShippedDate
