@@ -97,7 +97,7 @@ jobs:
         generateDriftAndChangeReport: false
         failReleaseIfDriftDetected: false
         staticCodeAnalysis: false #Currently not setup in this pipeline
-        publishArtifacts: true
+        publishArtifacts: false
  
       # Steps represent a sequence of tasks that will be executed as part of the job
       steps:
