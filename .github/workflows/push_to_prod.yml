@@ -94,7 +94,7 @@ jobs:
         check_JDBC: "jdbc:sqlserver://127.0.0.1:1988;authentication=sqlPassword;databaseName=NewWorldDB_Check;encrypt=true;trustServerCertificate=true" 
         
         # End of Environment Secrets #
-        generateDriftAndChangeReport: true
+        generateDriftAndChangeReport: false
         failReleaseIfDriftDetected: false
         staticCodeAnalysis: false #Currently not setup in this pipeline
         publishArtifacts: true
@@ -136,7 +136,7 @@ jobs:
       databaseName: "NewWorldDB_Prod"
       JDBC: "jdbc:sqlserver://127.0.0.1:1988;authentication=sqlPassword;databaseName=NewWorldDB_Prod;encrypt=true;trustServerCertificate=true" 
       
-      pauseForCodeReview: true
+      pauseForCodeReview: false
  
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
