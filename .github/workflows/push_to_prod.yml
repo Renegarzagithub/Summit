@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
  
-name: main-Workflow
+name: main-Workflow-Prod
  
 # Controls when the workflow will run
 on:
@@ -83,7 +83,7 @@ jobs:
       # The type of runner that the job will run on
       runs-on: self-hosted
       environment: 'prod' #Ensure this environment name is setup in the projects Settings>Environment area. Ensuring any reviewers are also configured
-      if: ${{ false }} #Set this variable to false to temporarily disable the job
+      if: ${{ true }} #Set this variable to false to temporarily disable the job
       needs: build
       env:
         stage: 'Prod'
