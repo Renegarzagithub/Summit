@@ -1,0 +1,1 @@
+alter table dbo.customers add Twitterid int null

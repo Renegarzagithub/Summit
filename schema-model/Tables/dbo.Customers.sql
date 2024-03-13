@@ -13,7 +13,8 @@ CREATE TABLE [dbo].[Customers]
 [Fax] [nvarchar] (24) NULL,
 [LinkedIn] [nvarchar] (50) NULL,
 [RegionCode] [nvarchar] (20) NULL,
-[CityCode] [nvarchar] (20) NULL
+[CityCode] [nvarchar] (20) NULL,
+[TwitterID] [nchar] (10) NULL
 )
 GO
 ALTER TABLE [dbo].[Customers] ADD CONSTRAINT [PK_Customers] PRIMARY KEY CLUSTERED ([CustomerID])
