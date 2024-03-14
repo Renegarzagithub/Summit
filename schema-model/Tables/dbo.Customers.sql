@@ -14,7 +14,8 @@ CREATE TABLE [dbo].[Customers]
 [LinkedIn] [nvarchar] (50) NULL,
 [RegionCode] [nvarchar] (20) NULL,
 [CityCode] [nvarchar] (20) NULL,
-[TwitterID] [nchar] (10) NULL
+[TwitterID] [nchar] (10) NULL,
+[SocialSecurity] [int] NULL
 )
 GO
 ALTER TABLE [dbo].[Customers] ADD CONSTRAINT [PK_Customers] PRIMARY KEY CLUSTERED ([CustomerID])
